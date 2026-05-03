@@ -1,1 +1,73 @@
 @import 'tailwindcss';
+
+@theme {
+  --font-sans: var(--font-instrument-sans), system-ui, -apple-system, sans-serif;
+  --font-serif: var(--font-instrument-serif), Georgia, serif;
+  --font-mono: var(--font-jetbrains-mono), 'Fira Code', monospace;
+
+  --color-bg: #fafafa;
+  --color-surface: #ffffff;
+  --color-border: rgba(0, 0, 0, 0.08);
+  --color-text: #0a0a0a;
+  --color-text-muted: #555555;
+  --color-primary: #0a0a0a;
+  --color-primary-fg: #ffffff;
+  --color-accent: #7c5cff;
+  --color-accent-2: #3a8eff;
+}
+
+@layer base {
+  :root[data-theme='dark'] {
+    --color-bg: #0a0a0a;
+    --color-surface: #0f0f12;
+    --color-border: rgba(255, 255, 255, 0.08);
+    --color-text: #ffffff;
+    --color-text-muted: rgba(255, 255, 255, 0.6);
+    --color-primary: #ffffff;
+    --color-primary-fg: #0a0a0a;
+  }
+
+  html {
+    color-scheme: light dark;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+  }
+
+  body {
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    transition: background-color 200ms ease, color 200ms ease;
+  }
+
+  ::selection {
+    background-color: var(--color-accent);
+    color: white;
+  }
+}
+
+@keyframes accordion-down {
+  from {
+    height: 0;
+  }
+  to {
+    height: var(--radix-accordion-content-height);
+  }
+}
+
+@keyframes accordion-up {
+  from {
+    height: var(--radix-accordion-content-height);
+  }
+  to {
+    height: 0;
+  }
+}
+
+@layer utilities {
+  .animate-accordion-down {
+    animation: accordion-down 200ms ease-out;
+  }
+  .animate-accordion-up {
+    animation: accordion-up 200ms ease-out;
+  }
+}
