@@ -32,7 +32,7 @@ export default async function WorkPage({ params }: { params: Promise<{ slug: str
   const entry = await loadMdxBySlug(WORK_DIR, slug);
   if (!entry) notFound();
 
-  const fm = entry.frontmatter as {
+  const fm = entry.frontmatter as unknown as {
     title: string;
     client: string;
     year?: number;
