@@ -1,19 +1,13 @@
 import { Container } from '@/components/layout/Container';
 import { ButtonLink } from '@/components/ui/Button';
 import { SectionLabel } from '@/components/sections/SectionLabel';
+import { LiquidMetalBackground } from './LiquidMetalBackground';
 import { site } from '@/data/site';
 
 export function Hero() {
   return (
     <section className="relative overflow-hidden">
-      <div
-        aria-hidden
-        className="absolute inset-0 -z-10 opacity-70"
-        style={{
-          background:
-            'radial-gradient(ellipse 80% 60% at 70% 20%, rgba(124,92,255,0.25), transparent 60%), radial-gradient(ellipse 60% 50% at 30% 70%, rgba(58,142,255,0.15), transparent 60%)',
-        }}
-      />
+      <LiquidMetalBackground />
       <Container className="py-24 md:py-36">
         <SectionLabel>{site.name} · Web services for small business</SectionLabel>
         <h1 className="mt-6 text-5xl md:text-7xl font-semibold tracking-tight leading-[1.05] max-w-4xl">
