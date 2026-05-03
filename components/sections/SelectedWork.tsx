@@ -2,20 +2,22 @@ import { Section } from './Section';
 import { SectionLabel } from './SectionLabel';
 import { WorkCard, type WorkItem } from '@/components/cards/WorkCard';
 import { ButtonLink } from '@/components/ui/Button';
+import { loadMdxEntries, WORK_DIR } from '@/lib/mdx';
 
-const featuredWork: WorkItem[] = [
-  {
-    slug: 'universally-us',
-    title: 'Universally Us',
-    client: 'Informational platform',
-    summary:
-      'A headless-CMS-driven content site built on Next.js, focused on accessibility and performance.',
-    cover: '/images/work/universally-us-cover.svg',
-    stack: ['Next.js', 'Headless CMS', 'Tailwind'],
-  },
-];
+export async function SelectedWork() {
+  const entries = await loadMdxEntries(WORK_DIR);
+  const items: WorkItem[] = entries.slice(0, 2).map((e) => {
+    const f = e.frontmatter as WorkItem & { stack: string[] };
+    return {
+      slug: f.slug,
+      title: f.title,
+      client: f.client,
+      summary: f.summary,
+      cover: f.cover,
+      stack: f.stack,
+    };
+  });
 
-export function SelectedWork() {
   return (
     <Section id="work">
       <div className="flex items-end justify-between flex-wrap gap-4">
@@ -28,7 +30,7 @@ export function SelectedWork() {
         </ButtonLink>
       </div>
       <div className="mt-10 grid gap-6 md:grid-cols-2">
-        {featuredWork.map((item) => (
+        {items.map((item) => (
           <WorkCard key={item.slug} item={item} />
         ))}
       </div>
