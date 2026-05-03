@@ -1,0 +1,51 @@
+import type { Metadata } from 'next';
+import { Container } from '@/components/layout/Container';
+import { SectionLabel } from '@/components/sections/SectionLabel';
+import { ContactForm } from '@/components/forms/ContactForm';
+import { site } from '@/data/site';
+
+export const metadata: Metadata = {
+  title: 'Contact',
+  description: 'Book a discovery call or send a message.',
+};
+
+export default function ContactPage() {
+  const calUrl = site.calComUsername ? `https://cal.com/${site.calComUsername}/15min` : null;
+
+  return (
+    <Container size="narrow" className="py-20 md:py-28">
+      <SectionLabel>Contact</SectionLabel>
+      <h1 className="mt-3 text-4xl md:text-5xl font-semibold tracking-tight">Let&rsquo;s talk.</h1>
+      <p className="mt-4 text-[var(--color-text-muted)]">
+        Book a 15-minute discovery call, or send a message and I&rsquo;ll reply within one business
+        day.
+      </p>
+
+      {calUrl ? (
+        <div className="mt-12">
+          <h2 className="text-lg font-semibold mb-4">Book a call</h2>
+          <iframe
+            src={calUrl}
+            title="Book a call"
+            className="w-full rounded-xl border border-[var(--color-border)]"
+            style={{ height: 700 }}
+            loading="lazy"
+          />
+        </div>
+      ) : null}
+
+      <div className="mt-16 pt-12 border-t border-[var(--color-border)]">
+        <h2 className="text-lg font-semibold mb-2">Or send a message</h2>
+        {site.ownerEmail ? (
+          <p className="text-sm text-[var(--color-text-muted)] mb-6">
+            Or email me directly:{' '}
+            <a className="underline" href={`mailto:${site.ownerEmail}`}>
+              {site.ownerEmail}
+            </a>
+          </p>
+        ) : null}
+        <ContactForm />
+      </div>
+    </Container>
+  );
+}
