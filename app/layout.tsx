@@ -3,6 +3,8 @@ import './globals.css';
 import { instrumentSans, instrumentSerif, jetbrainsMono } from './fonts';
 import { site } from '@/data/site';
 import { Providers } from './providers';
+import { Nav } from '@/components/layout/Nav';
+import { Footer } from '@/components/layout/Footer';
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
@@ -34,7 +36,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
       </head>
       <body>
-        <Providers>{children}</Providers>
+        <Providers>
+          <Nav />
+          {children}
+          <Footer />
+        </Providers>
       </body>
     </html>
   );
