@@ -1,4 +1,4 @@
-import { Instrument_Sans, Instrument_Serif, JetBrains_Mono } from 'next/font/google';
+import { Instrument_Sans, Instrument_Serif, JetBrains_Mono, Space_Grotesk } from 'next/font/google';
 
 export const instrumentSans = Instrument_Sans({
   subsets: ['latin'],
@@ -17,5 +17,11 @@ export const instrumentSerif = Instrument_Serif({
 export const jetbrainsMono = JetBrains_Mono({
   subsets: ['latin'],
   variable: '--font-jetbrains-mono',
+  display: 'swap',
+});
+
+export const spaceGrotesk = Space_Grotesk({
+  subsets: ['latin'],
+  variable: '--font-space-grotesk',
   display: 'swap',
 });

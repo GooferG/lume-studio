@@ -6,7 +6,7 @@ import { packages } from '@/data/packages';
 export function Packages() {
   return (
     <Section id="pricing">
-      <SectionLabel number="04">Pricing</SectionLabel>
+      <SectionLabel>Pricing</SectionLabel>
       <h2 className="mt-3 text-3xl md:text-4xl font-semibold tracking-tight max-w-2xl">
         Transparent pricing
       </h2>

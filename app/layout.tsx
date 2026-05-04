@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import './globals.css';
-import { instrumentSans, instrumentSerif, jetbrainsMono } from './fonts';
+import { instrumentSans, instrumentSerif, jetbrainsMono, spaceGrotesk } from './fonts';
 import { site } from '@/data/site';
 import { Providers } from './providers';
 import { Nav } from '@/components/layout/Nav';
@@ -32,7 +32,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html
       lang="en"
       suppressHydrationWarning
-      className={`${instrumentSans.variable} ${instrumentSerif.variable} ${jetbrainsMono.variable}`}
+      className={`${instrumentSans.variable} ${instrumentSerif.variable} ${jetbrainsMono.variable} ${spaceGrotesk.variable}`}
     >
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />

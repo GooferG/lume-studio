@@ -1,30 +1,39 @@
 @import 'tailwindcss';
 
 @theme {
-  --font-sans: var(--font-instrument-sans), system-ui, -apple-system, sans-serif;
+  --font-sans: var(--font-space-grotesk), var(--font-instrument-sans), system-ui, -apple-system, sans-serif;
   --font-serif: var(--font-instrument-serif), Georgia, serif;
   --font-mono: var(--font-jetbrains-mono), 'Fira Code', monospace;
+  --font-display: var(--font-space-grotesk), system-ui, sans-serif;
 
-  --color-bg: #fafafa;
+  /* Aperture palette — light */
+  --color-bg: #EEF2F6;
   --color-surface: #ffffff;
-  --color-border: rgba(0, 0, 0, 0.08);
-  --color-text: #0a0a0a;
-  --color-text-muted: #555555;
-  --color-primary: #0a0a0a;
+  --color-border: rgba(14, 26, 43, 0.1);
+  --color-text: #0E1A2B;
+  --color-text-muted: #5C6B7E;
+  --color-primary: #0E1A2B;
   --color-primary-fg: #ffffff;
-  --color-accent: #7c5cff;
-  --color-accent-2: #3a8eff;
+  --color-accent: #FF5E47;
+  --color-accent-2: #0E1A2B;
+
+  /* brand tokens */
+  --color-navy: #0E1A2B;
+  --color-coral: #FF5E47;
+  --color-ice: #EEF2F6;
+  --color-steel: #5C6B7E;
 }
 
 @layer base {
   :root[data-theme='dark'] {
-    --color-bg: #0a0a0a;
-    --color-surface: #0f0f12;
-    --color-border: rgba(255, 255, 255, 0.08);
-    --color-text: #ffffff;
-    --color-text-muted: rgba(255, 255, 255, 0.6);
-    --color-primary: #ffffff;
-    --color-primary-fg: #0a0a0a;
+    --color-bg: #0E1A2B;
+    --color-surface: #162236;
+    --color-border: rgba(238, 242, 246, 0.1);
+    --color-text: #EEF2F6;
+    --color-text-muted: rgba(238, 242, 246, 0.55);
+    --color-primary: #EEF2F6;
+    --color-primary-fg: #0E1A2B;
+    --color-accent: #FF5E47;
   }
 
   html {

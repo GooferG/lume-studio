@@ -8,7 +8,7 @@ export function FinalCTA() {
       <div className="rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] p-10 md:p-16 text-center relative overflow-hidden">
         <div className="absolute -top-32 -right-32 h-64 w-64 rounded-full bg-[var(--color-accent)]/15 blur-3xl pointer-events-none" />
         <div className="relative">
-          <SectionLabel number="07" className="justify-center inline-block">
+          <SectionLabel className="justify-center inline-block">
             Get started
           </SectionLabel>
           <h2 className="mt-4 text-3xl md:text-4xl font-semibold tracking-tight">

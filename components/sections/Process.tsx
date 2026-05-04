@@ -5,7 +5,7 @@ import { process } from '@/data/process';
 export function Process() {
   return (
     <Section id="process">
-      <SectionLabel number="05">Process</SectionLabel>
+      <SectionLabel>Process</SectionLabel>
       <h2 className="mt-3 text-3xl md:text-4xl font-semibold tracking-tight max-w-2xl">
         How it works
       </h2>

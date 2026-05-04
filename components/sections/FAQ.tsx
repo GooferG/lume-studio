@@ -9,7 +9,7 @@ import { faq } from '@/data/faq';
 export function FAQ() {
   return (
     <Section id="faq" containerSize="narrow">
-      <SectionLabel number="06">FAQ</SectionLabel>
+      <SectionLabel>FAQ</SectionLabel>
       <h2 className="mt-3 text-3xl md:text-4xl font-semibold tracking-tight">Common questions</h2>
       <Accordion.Root
         type="single"

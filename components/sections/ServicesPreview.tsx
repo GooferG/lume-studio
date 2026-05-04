@@ -6,7 +6,7 @@ import { services } from '@/data/services';
 export function ServicesPreview() {
   return (
     <Section id="services">
-      <SectionLabel number="02">Services</SectionLabel>
+      <SectionLabel>Services</SectionLabel>
       <h2 className="mt-3 text-3xl md:text-4xl font-semibold tracking-tight max-w-2xl">
         What we do
       </h2>

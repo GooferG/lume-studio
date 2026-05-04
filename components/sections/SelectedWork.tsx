@@ -22,7 +22,7 @@ export async function SelectedWork() {
     <Section id="work">
       <div className="flex items-end justify-between flex-wrap gap-4">
         <div>
-          <SectionLabel number="03">Selected work</SectionLabel>
+          <SectionLabel>Selected work</SectionLabel>
           <h2 className="mt-3 text-3xl md:text-4xl font-semibold tracking-tight">Recent builds</h2>
         </div>
         <ButtonLink href="/work" variant="ghost" size="sm">
