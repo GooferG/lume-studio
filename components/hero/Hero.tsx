@@ -7,24 +7,8 @@ export function Hero() {
   return (
     <section className="relative overflow-hidden bg-[var(--color-surface)]">
       <ParticleBackground />
-      {/* Decorative lens rings — top right */}
-      <div aria-hidden className="pointer-events-none absolute -right-32 -top-32 md:-right-16 md:-top-16">
-        <svg
-          width="560"
-          height="560"
-          viewBox="0 0 560 560"
-          fill="none"
-          className="opacity-[0.07] dark:opacity-[0.04]"
-        >
-          <circle cx="280" cy="280" r="220" stroke="var(--color-navy, #0E1A2B)" strokeWidth="2" />
-          <circle cx="280" cy="280" r="160" stroke="var(--color-navy, #0E1A2B)" strokeWidth="1.5" />
-          <circle cx="280" cy="280" r="100" stroke="var(--color-navy, #0E1A2B)" strokeWidth="1" />
-          <circle cx="280" cy="280" r="50" fill="var(--color-coral, #FF5E47)" opacity="0.6" />
-          <circle cx="246" cy="246" r="18" fill="white" opacity="0.9" />
-        </svg>
-      </div>
 
-      <Container className="relative py-28 md:py-40">
+<Container className="relative py-28 md:py-40">
         <div className="max-w-3xl">
           {/* Eyebrow */}
           <div
