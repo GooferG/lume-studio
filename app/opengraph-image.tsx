@@ -16,19 +16,29 @@ export default function OG() {
           flexDirection: 'column',
           justifyContent: 'space-between',
           padding: 80,
-          background:
-            'radial-gradient(ellipse 80% 60% at 70% 20%, #7c5cff44, transparent 60%), #0a0a0a',
-          color: 'white',
+          background: '#0E1A2B',
+          color: '#EEF2F6',
           fontFamily: 'sans-serif',
         }}
       >
-        <div style={{ fontSize: 28, letterSpacing: 6, opacity: 0.7 }}>
-          {site.name.toUpperCase()}
+        {/* logo row */}
+        <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
+          <svg width="36" height="36" viewBox="0 0 120 120" fill="none">
+            <circle cx="60" cy="60" r="44" stroke="#EEF2F6" strokeWidth="4" />
+            <circle cx="60" cy="60" r="28" fill="#FF5E47" />
+            <circle cx="50" cy="50" r="6" fill="white" opacity="0.95" />
+          </svg>
+          <div style={{ fontSize: 24, fontWeight: 500, letterSpacing: -0.5 }}>
+            Lume·Studio
+          </div>
         </div>
-        <div style={{ fontSize: 88, fontWeight: 600, lineHeight: 1.05, letterSpacing: -2 }}>
-          {site.tagline}
+        {/* headline */}
+        <div style={{ fontSize: 80, fontWeight: 500, lineHeight: 1.0, letterSpacing: -2, maxWidth: 900 }}>
+          We focus your brand into{' '}
+          <span style={{ color: '#FF5E47' }}>view.</span>
         </div>
-        <div style={{ fontSize: 24, opacity: 0.6, maxWidth: 800 }}>{site.description}</div>
+        {/* footer */}
+        <div style={{ fontSize: 22, opacity: 0.5 }}>{site.description}</div>
       </div>
     ),
     size,
