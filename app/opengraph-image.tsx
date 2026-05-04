@@ -29,13 +29,13 @@ export default function OG() {
             <circle cx="50" cy="50" r="6" fill="white" opacity="0.95" />
           </svg>
           <div style={{ display: 'flex', fontSize: 24, fontWeight: 500, letterSpacing: -0.5 }}>
-            Lume·Studio
+            {site.name}
           </div>
         </div>
         {/* headline */}
-        <div style={{ display: 'flex', fontSize: 80, fontWeight: 500, lineHeight: 1.0, letterSpacing: -2, maxWidth: 900 }}>
-          We focus your brand into{' '}
-          <span style={{ color: '#FF5E47', marginLeft: 24 }}>view.</span>
+        <div style={{ display: 'flex', flexWrap: 'wrap', fontSize: 80, fontWeight: 500, lineHeight: 1.0, letterSpacing: -2, maxWidth: 900 }}>
+          We build websites small businesses&nbsp;
+          <span style={{ color: '#FF5E47' }}>are proud of.</span>
         </div>
         {/* footer */}
         <div style={{ display: 'flex', fontSize: 22, opacity: 0.5 }}>{site.description}</div>
