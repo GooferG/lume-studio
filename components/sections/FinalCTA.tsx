@@ -19,7 +19,7 @@ export function FinalCTA() {
           </p>
           <div className="mt-8 flex gap-3 justify-center flex-wrap">
             <ButtonLink href="/contact">Book a call</ButtonLink>
-            <ButtonLink href="/pricing" variant="secondary">
+            <ButtonLink href="https://forms.gle/aU5dStwZwXwrfhus8" variant="secondary">
               Get a quote
             </ButtonLink>
           </div>

@@ -38,11 +38,16 @@ export default function PricingPage() {
           Need something custom?
         </h2>
         <p className="mt-4 text-[var(--color-text-muted)]">
-          Tell me about your project. I will reply within one business day.
+          Tell us about your project and we&rsquo;ll come back with a number within one business day.
         </p>
-        <div className="mt-10">
-          <QuoteForm />
-        </div>
+        <a
+          href="https://forms.gle/aU5dStwZwXwrfhus8"
+          target="_blank"
+          rel="noreferrer"
+          className="mt-8 inline-flex items-center justify-center h-12 px-7 text-base font-medium rounded-full bg-[var(--color-accent)] text-white hover:opacity-90 transition-opacity"
+        >
+          Fill out the quote form →
+        </a>
       </Container>
     </>
   );

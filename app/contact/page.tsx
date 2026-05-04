@@ -34,6 +34,23 @@ export default function ContactPage() {
         </div>
       ) : null}
 
+      <div className="mt-12 p-6 rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <div>
+          <div className="font-semibold">Get a quote</div>
+          <p className="mt-1 text-sm text-[var(--color-text-muted)]">
+            Tell us about your business and what you need — we&rsquo;ll come back with a number.
+          </p>
+        </div>
+        <a
+          href="https://forms.gle/aU5dStwZwXwrfhus8"
+          target="_blank"
+          rel="noreferrer"
+          className="shrink-0 inline-flex items-center justify-center h-10 px-5 text-sm font-medium rounded-full bg-[var(--color-accent)] text-white hover:opacity-90 transition-opacity"
+        >
+          Fill out the form →
+        </a>
+      </div>
+
       <div className="mt-16 pt-12 border-t border-[var(--color-border)]">
         <h2 className="text-lg font-semibold mb-2">Or send a message</h2>
         {site.ownerEmail ? (
