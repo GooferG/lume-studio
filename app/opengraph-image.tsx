@@ -28,17 +28,17 @@ export default function OG() {
             <circle cx="60" cy="60" r="28" fill="#FF5E47" />
             <circle cx="50" cy="50" r="6" fill="white" opacity="0.95" />
           </svg>
-          <div style={{ fontSize: 24, fontWeight: 500, letterSpacing: -0.5 }}>
+          <div style={{ display: 'flex', fontSize: 24, fontWeight: 500, letterSpacing: -0.5 }}>
             Lume·Studio
           </div>
         </div>
         {/* headline */}
-        <div style={{ fontSize: 80, fontWeight: 500, lineHeight: 1.0, letterSpacing: -2, maxWidth: 900 }}>
+        <div style={{ display: 'flex', fontSize: 80, fontWeight: 500, lineHeight: 1.0, letterSpacing: -2, maxWidth: 900 }}>
           We focus your brand into{' '}
-          <span style={{ color: '#FF5E47' }}>view.</span>
+          <span style={{ color: '#FF5E47', marginLeft: 24 }}>view.</span>
         </div>
         {/* footer */}
-        <div style={{ fontSize: 22, opacity: 0.5 }}>{site.description}</div>
+        <div style={{ display: 'flex', fontSize: 22, opacity: 0.5 }}>{site.description}</div>
       </div>
     ),
     size,
