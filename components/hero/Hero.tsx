@@ -31,17 +31,15 @@ export function Hero() {
 
           {/* Headline */}
           <h1
-            className="leading-[0.96] tracking-[-0.035em] text-[var(--color-text)]"
+            className="leading-[0.96] tracking-[-0.035em] text-(--color-text)"
             style={{
               fontFamily: 'var(--font-space-grotesk, inherit)',
               fontWeight: 500,
               fontSize: 'clamp(48px, 8vw, 80px)',
             }}
           >
-            We focus your
-            <br />
-            brand into{' '}
-            <span style={{ color: 'var(--color-coral, #FF5E47)' }}>view.</span>
+            We build websites small businesses{' '}
+            <span style={{ color: 'var(--color-coral, #FF5E47)' }}>are proud of.</span>
           </h1>
 
           {/* Subtext */}
@@ -54,7 +52,7 @@ export function Hero() {
               color: 'var(--color-text-muted)',
             }}
           >
-            DTC websites and identity for small teams that want to be seen. Modern, fast, built right.
+            A great website brings in more customers and makes your business look as good as it actually is. No tech headaches — we handle everything.
           </p>
 
           {/* CTAs */}

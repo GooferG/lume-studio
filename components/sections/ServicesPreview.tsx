@@ -11,8 +11,7 @@ export function ServicesPreview() {
         What we do
       </h2>
       <p className="mt-4 text-[var(--color-text-muted)] max-w-xl">
-        Four focused services that cover everything from a brand-new site to
-        fixing the one you already have.
+        Whether you need a brand-new website or want to improve the one you have, we make it simple.
       </p>
       <div className="mt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
         {services.map((service) => (

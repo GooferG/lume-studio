@@ -3,7 +3,7 @@ export const site = {
   shortName: 'Lume',
   tagline: 'Modern websites, built right.',
   description:
-    'Custom Next.js websites for small businesses. Real performance, real SEO, transparent pricing.',
+    'Websites for small businesses that want to look great and get found online. Transparent pricing, no tech jargon.',
   url: process.env.NEXT_PUBLIC_SITE_URL ?? 'https://lume-studio-sandy.vercel.app',
   ownerName: 'Luiz Meneghim',
   ownerEmail: process.env.RESEND_TO_EMAIL ?? '',

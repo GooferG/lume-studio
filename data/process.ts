@@ -7,22 +7,22 @@ export type ProcessStep = {
 export const process: ProcessStep[] = [
   {
     number: '01',
-    title: 'Discover',
-    description: 'A 15-minute call to understand your business, goals, and constraints.',
+    title: 'Chat',
+    description: 'A quick 15-minute call to learn about your business, your goals, and what you need.',
   },
   {
     number: '02',
     title: 'Design',
-    description: 'Mockups for your approval before any code is written.',
+    description: 'You see exactly what the site will look like before we build anything. No surprises.',
   },
   {
     number: '03',
     title: 'Build',
-    description: 'Modern Next.js, Tailwind, and a stack that will age well.',
+    description: 'We build your site and keep you updated along the way. You can give feedback at any point.',
   },
   {
     number: '04',
-    title: 'Ship',
-    description: 'Deployed, handed over, and yours to keep — code and all.',
+    title: 'Launch',
+    description: 'Your site goes live. You get everything — full ownership, no strings attached.',
   },
 ];
