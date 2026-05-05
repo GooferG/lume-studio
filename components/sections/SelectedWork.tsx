@@ -15,6 +15,7 @@ export async function SelectedWork() {
       summary: f.summary,
       cover: f.cover,
       stack: f.stack,
+      coverPosition: f.coverPosition,
     };
   });
 

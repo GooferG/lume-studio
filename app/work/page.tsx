@@ -20,6 +20,7 @@ export default async function WorkIndexPage() {
       summary: f.summary,
       cover: f.cover,
       stack: f.stack,
+      coverPosition: f.coverPosition,
     };
   });
 

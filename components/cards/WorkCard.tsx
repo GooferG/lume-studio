@@ -10,6 +10,7 @@ export type WorkItem = {
   summary: string;
   cover: string;
   stack: string[];
+  coverPosition?: 'center' | 'top' | 'bottom';
 };
 
 export function WorkCard({ item }: { item: WorkItem }) {
@@ -26,7 +27,11 @@ export function WorkCard({ item }: { item: WorkItem }) {
           src={item.cover}
           alt={item.title}
           fill
-          className="object-cover transition-transform duration-500 group-hover:scale-105"
+          className={cn(
+            'object-cover transition-transform duration-500 group-hover:scale-105',
+            item.coverPosition === 'top' && 'object-top',
+            item.coverPosition === 'bottom' && 'object-bottom',
+          )}
           sizes="(min-width: 768px) 50vw, 100vw"
           priority
         />
