@@ -1,23 +1,14 @@
 import { Section } from './Section';
 import { SectionLabel } from './SectionLabel';
-import { WorkCard, type WorkItem } from '@/components/cards/WorkCard';
+import { ProjectCard } from '@/components/work/ProjectCard';
+import { ActiveTileProvider } from '@/components/work/ActiveTileContext';
 import { ButtonLink } from '@/components/ui/Button';
 import { loadMdxEntries, WORK_DIR } from '@/lib/mdx';
+import type { WorkItem } from '@/lib/work-types';
 
 export async function SelectedWork() {
   const entries = await loadMdxEntries(WORK_DIR);
-  const items: WorkItem[] = entries.slice(0, 2).map((e) => {
-    const f = e.frontmatter as WorkItem & { stack: string[] };
-    return {
-      slug: f.slug,
-      title: f.title,
-      client: f.client,
-      summary: f.summary,
-      cover: f.cover,
-      stack: f.stack,
-      coverPosition: f.coverPosition,
-    };
-  });
+  const items: WorkItem[] = entries.slice(0, 2).map((e) => e.frontmatter as WorkItem);
 
   return (
     <Section id="work">
@@ -30,11 +21,13 @@ export async function SelectedWork() {
           See all work →
         </ButtonLink>
       </div>
-      <div className="mt-10 grid gap-6 md:grid-cols-2">
-        {items.map((item) => (
-          <WorkCard key={item.slug} item={item} />
-        ))}
-      </div>
+      <ActiveTileProvider>
+        <div className="mt-10 grid gap-6 md:grid-cols-2">
+          {items.map((item) => (
+            <ProjectCard key={item.slug} item={item} />
+          ))}
+        </div>
+      </ActiveTileProvider>
     </Section>
   );
 }
