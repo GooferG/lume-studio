@@ -11,32 +11,37 @@ import { useReducedMotion } from '@/lib/hooks/useReducedMotion';
 import { useFirstVisit } from '@/lib/hooks/useFirstVisit';
 
 const containerVariants: Variants = {
-  initial: { filter: 'saturate(0)' },
+  initial: { filter: 'saturate(0) blur(2px)' },
   final: {
-    filter: 'saturate(1)',
-    transition: { duration: 0.4, delay: 1.1, ease: 'easeOut' },
+    filter: ['saturate(0) blur(2px)', 'saturate(1.25) blur(0px)', 'saturate(1) blur(0px)'],
+    transition: { duration: 1.6, delay: 0.8, times: [0, 0.7, 1], ease: 'easeOut' },
   },
-  instant: { filter: 'saturate(1)' },
+  instant: { filter: 'saturate(1) blur(0px)' },
 };
 
 const contentParent: Variants = {
   initial: {},
   animate: {
     transition: {
-      delayChildren: 0.7,
-      staggerChildren: 0.05,
+      delayChildren: 1.0,
+      staggerChildren: 0.08,
     },
   },
   instant: {},
 };
 
 const contentChild: Variants = {
-  initial: { opacity: 0, y: 8 },
-  animate: { opacity: 1, y: 0, transition: { duration: 0.4, ease: 'easeOut' } },
-  instant: { opacity: 1, y: 0 },
+  initial: { opacity: 0, y: 14, filter: 'blur(6px)' },
+  animate: {
+    opacity: 1,
+    y: 0,
+    filter: 'blur(0px)',
+    transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] },
+  },
+  instant: { opacity: 1, y: 0, filter: 'blur(0px)' },
 };
 
-const SKELETON_HIDE_AT_MS = 700;
+const SKELETON_HIDE_AT_MS = 1100;
 
 export function BuildHero() {
   const reducedMotion = useReducedMotion();
