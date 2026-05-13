@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { Container } from '@/components/layout/Container';
 import { SectionLabel } from '@/components/sections/SectionLabel';
 import { PackageCard } from '@/components/cards/PackageCard';
-import { QuoteForm } from '@/components/forms/QuoteForm';
+import { Calculator } from '@/components/pricing/Calculator';
 import { packages } from '@/data/packages';
 
 export const metadata: Metadata = {
@@ -28,6 +28,21 @@ export default function PricingPage() {
           ))}
         </div>
       </Container>
+
+      <Container className="pb-20 md:pb-28 border-t border-[var(--color-border)] pt-20 md:pt-28">
+        <SectionLabel>Estimate</SectionLabel>
+        <h2 className="mt-3 text-3xl md:text-4xl font-semibold tracking-tight max-w-3xl">
+          Build your own quote
+        </h2>
+        <p className="mt-4 text-[var(--color-text-muted)] max-w-2xl">
+          Pick what fits, see a starting estimate. It snaps to the closest package when it&rsquo;s
+          near one, or routes to a custom quote for larger builds.
+        </p>
+        <div className="mt-12">
+          <Calculator />
+        </div>
+      </Container>
+
       <Container
         id="quote"
         size="narrow"
