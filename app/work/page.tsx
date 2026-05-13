@@ -1,8 +1,10 @@
 import type { Metadata } from 'next';
 import { Container } from '@/components/layout/Container';
 import { SectionLabel } from '@/components/sections/SectionLabel';
-import { WorkCard, type WorkItem } from '@/components/cards/WorkCard';
+import { ProjectCard } from '@/components/work/ProjectCard';
+import { ActiveTileProvider } from '@/components/work/ActiveTileContext';
 import { loadMdxEntries, WORK_DIR } from '@/lib/mdx';
+import type { WorkItem } from '@/lib/work-types';
 
 export const metadata: Metadata = {
   title: 'Work',
@@ -11,18 +13,7 @@ export const metadata: Metadata = {
 
 export default async function WorkIndexPage() {
   const entries = await loadMdxEntries(WORK_DIR);
-  const items: WorkItem[] = entries.map((e) => {
-    const f = e.frontmatter as WorkItem & { stack: string[] };
-    return {
-      slug: f.slug,
-      title: f.title,
-      client: f.client,
-      summary: f.summary,
-      cover: f.cover,
-      stack: f.stack,
-      coverPosition: f.coverPosition,
-    };
-  });
+  const items: WorkItem[] = entries.map((e) => e.frontmatter as WorkItem);
 
   return (
     <Container className="py-20 md:py-28">
@@ -30,11 +21,13 @@ export default async function WorkIndexPage() {
       <h1 className="mt-3 text-4xl md:text-5xl font-semibold tracking-tight max-w-3xl">
         Selected projects
       </h1>
-      <div className="mt-12 grid gap-6 md:grid-cols-2">
-        {items.map((item) => (
-          <WorkCard key={item.slug} item={item} />
-        ))}
-      </div>
+      <ActiveTileProvider>
+        <div className="mt-12 grid gap-6 md:grid-cols-2">
+          {items.map((item) => (
+            <ProjectCard key={item.slug} item={item} />
+          ))}
+        </div>
+      </ActiveTileProvider>
     </Container>
   );
 }
