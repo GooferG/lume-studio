@@ -15,6 +15,8 @@ type LivePreviewTileProps = {
   coverPosition?: 'center' | 'top' | 'bottom';
 };
 
+const VIEWPORT_WIDTH = 1280;
+
 export function LivePreviewTile({
   slug,
   title,
@@ -26,6 +28,7 @@ export function LivePreviewTile({
   const containerRef = useRef<HTMLDivElement>(null);
   const [inView, setInView] = useState(false);
   const [hovered, setHovered] = useState(false);
+  const [scale, setScale] = useState(1);
 
   const isActive = activeSlug === slug;
 
@@ -37,6 +40,19 @@ export function LivePreviewTile({
       ([entry]) => setInView(!!entry?.isIntersecting),
       { threshold: 0.5 },
     );
+    obs.observe(node);
+    return () => obs.disconnect();
+  }, []);
+
+  // ResizeObserver — keep scale in sync with rendered tile width so the
+  // iframe always shows a 1280px-wide desktop layout shrunken to fit.
+  useEffect(() => {
+    const node = containerRef.current;
+    if (!node) return;
+    const obs = new ResizeObserver(([entry]) => {
+      const width = entry?.contentRect.width ?? node.clientWidth;
+      setScale(width / VIEWPORT_WIDTH);
+    });
     obs.observe(node);
     return () => obs.disconnect();
   }, []);
@@ -98,7 +114,12 @@ export function LivePreviewTile({
               loading="lazy"
               sandbox="allow-scripts allow-same-origin allow-popups"
               referrerPolicy="no-referrer"
-              className="h-full w-full border-0"
+              className="absolute top-0 left-0 border-0 origin-top-left"
+              style={{
+                width: `${VIEWPORT_WIDTH}px`,
+                height: scale > 0 ? `${100 / scale}%` : '100%',
+                transform: `scale(${scale || 1})`,
+              }}
             />
             <a
               href={liveUrl}
