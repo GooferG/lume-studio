@@ -6,6 +6,8 @@ import { SectionLabel } from '@/components/sections/SectionLabel';
 import { ButtonLink } from '@/components/ui/Button';
 import { loadMdxBySlug, loadMdxEntries, WORK_DIR } from '@/lib/mdx';
 import { mdxComponents } from '@/components/mdx/MdxComponents';
+import { WorkDetailMedia } from '@/components/work/WorkDetailMedia';
+import type { WorkItem } from '@/lib/work-types';
 
 export async function generateStaticParams() {
   const entries = await loadMdxEntries(WORK_DIR);
@@ -32,12 +34,7 @@ export default async function WorkPage({ params }: { params: Promise<{ slug: str
   const entry = await loadMdxBySlug(WORK_DIR, slug);
   if (!entry) notFound();
 
-  const fm = entry.frontmatter as unknown as {
-    title: string;
-    client: string;
-    year?: number;
-    stack?: string[];
-  };
+  const fm = entry.frontmatter as unknown as WorkItem & { year?: number };
   const stack = Array.isArray(fm.stack) ? fm.stack : [];
 
   return (
@@ -57,6 +54,9 @@ export default async function WorkPage({ params }: { params: Promise<{ slug: str
           ))}
         </div>
       ) : null}
+      <div className="mt-10">
+        <WorkDetailMedia item={fm} />
+      </div>
       <article className="mt-12">
         <MDXRemote source={entry.body} components={mdxComponents} />
       </article>
