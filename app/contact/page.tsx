@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Container } from '@/components/layout/Container';
 import { SectionLabel } from '@/components/sections/SectionLabel';
 import { ContactForm } from '@/components/forms/ContactForm';
+import { CalPopup } from '@/components/contact/CalPopup';
 import { site } from '@/data/site';
 
 export const metadata: Metadata = {
@@ -22,15 +23,14 @@ export default function ContactPage() {
       </p>
 
       {calUrl ? (
-        <div className="mt-12">
-          <h2 className="text-lg font-semibold mb-4">Book a call</h2>
-          <iframe
-            src={calUrl}
-            title="Book a call"
-            className="w-full rounded-xl border border-[var(--color-border)]"
-            style={{ height: 700 }}
-            loading="lazy"
-          />
+        <div className="mt-12 p-6 rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <div>
+            <div className="font-semibold">Book a 15-min discovery call</div>
+            <p className="mt-1 text-sm text-[var(--color-text-muted)]">
+              Pick a time that works for you. The scheduler opens in a popup.
+            </p>
+          </div>
+          <CalPopup calUrl={calUrl} triggerLabel="Pick a time →" />
         </div>
       ) : null}
 

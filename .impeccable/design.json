@@ -1,0 +1,294 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-05-17T00:00:00Z",
+  "title": "Design System: Lume Studio",
+  "extensions": {
+    "colorMeta": {
+      "ice-surface": {
+        "role": "neutral",
+        "displayName": "Ice Surface",
+        "canonical": "oklch(94.5% 0.01 235)",
+        "tonalRamp": [
+          "oklch(20% 0.02 235)",
+          "oklch(32% 0.02 235)",
+          "oklch(44% 0.02 235)",
+          "oklch(56% 0.015 235)",
+          "oklch(68% 0.015 235)",
+          "oklch(80% 0.012 235)",
+          "oklch(88% 0.01 235)",
+          "oklch(94.5% 0.01 235)"
+        ]
+      },
+      "surface-paper": {
+        "role": "neutral",
+        "displayName": "Surface Paper",
+        "canonical": "#ffffff",
+        "tonalRamp": [
+          "oklch(22% 0.005 235)",
+          "oklch(36% 0.005 235)",
+          "oklch(50% 0.005 235)",
+          "oklch(62% 0.004 235)",
+          "oklch(74% 0.003 235)",
+          "oklch(86% 0.002 235)",
+          "oklch(94% 0.001 235)",
+          "oklch(100% 0 0)"
+        ]
+      },
+      "midnight-navy": {
+        "role": "primary",
+        "displayName": "Midnight Navy",
+        "canonical": "oklch(20% 0.04 256)",
+        "tonalRamp": [
+          "oklch(14% 0.035 256)",
+          "oklch(20% 0.04 256)",
+          "oklch(30% 0.04 256)",
+          "oklch(42% 0.035 256)",
+          "oklch(56% 0.03 256)",
+          "oklch(70% 0.025 256)",
+          "oklch(84% 0.018 256)",
+          "oklch(94% 0.012 256)"
+        ]
+      },
+      "workshop-navy": {
+        "role": "neutral",
+        "displayName": "Workshop Navy",
+        "canonical": "oklch(24% 0.035 256)",
+        "tonalRamp": [
+          "oklch(16% 0.03 256)",
+          "oklch(24% 0.035 256)",
+          "oklch(34% 0.035 256)",
+          "oklch(46% 0.03 256)",
+          "oklch(58% 0.028 256)",
+          "oklch(72% 0.022 256)",
+          "oklch(85% 0.016 256)",
+          "oklch(94% 0.01 256)"
+        ]
+      },
+      "steel-grey": {
+        "role": "neutral",
+        "displayName": "Steel Grey",
+        "canonical": "oklch(52% 0.025 245)",
+        "tonalRamp": [
+          "oklch(20% 0.025 245)",
+          "oklch(32% 0.028 245)",
+          "oklch(42% 0.028 245)",
+          "oklch(52% 0.025 245)",
+          "oklch(64% 0.022 245)",
+          "oklch(76% 0.018 245)",
+          "oklch(86% 0.012 245)",
+          "oklch(94% 0.008 245)"
+        ]
+      },
+      "ember-coral": {
+        "role": "secondary",
+        "displayName": "Ember Coral",
+        "canonical": "oklch(70% 0.18 32)",
+        "tonalRamp": [
+          "oklch(38% 0.16 32)",
+          "oklch(48% 0.18 32)",
+          "oklch(58% 0.19 32)",
+          "oklch(70% 0.18 32)",
+          "oklch(78% 0.14 32)",
+          "oklch(85% 0.1 32)",
+          "oklch(91% 0.06 32)",
+          "oklch(96% 0.03 32)"
+        ]
+      },
+      "hairline": {
+        "role": "neutral",
+        "displayName": "Hairline (Navy/10)",
+        "canonical": "rgba(14, 26, 43, 0.1)",
+        "tonalRamp": [
+          "rgba(14, 26, 43, 0.5)",
+          "rgba(14, 26, 43, 0.4)",
+          "rgba(14, 26, 43, 0.3)",
+          "rgba(14, 26, 43, 0.2)",
+          "rgba(14, 26, 43, 0.15)",
+          "rgba(14, 26, 43, 0.1)",
+          "rgba(14, 26, 43, 0.06)",
+          "rgba(14, 26, 43, 0.03)"
+        ]
+      },
+      "hairline-dark": {
+        "role": "neutral",
+        "displayName": "Hairline Dark (Ice/10)",
+        "canonical": "rgba(238, 242, 246, 0.1)",
+        "tonalRamp": [
+          "rgba(238, 242, 246, 0.5)",
+          "rgba(238, 242, 246, 0.4)",
+          "rgba(238, 242, 246, 0.3)",
+          "rgba(238, 242, 246, 0.2)",
+          "rgba(238, 242, 246, 0.15)",
+          "rgba(238, 242, 246, 0.1)",
+          "rgba(238, 242, 246, 0.06)",
+          "rgba(238, 242, 246, 0.03)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Hero headlines and section openers. Max one per page." },
+      "headline": { "displayName": "Headline", "purpose": "Section titles, page H1s on internal routes." },
+      "title": { "displayName": "Title", "purpose": "Card titles, FAQ questions, package names." },
+      "body": { "displayName": "Body", "purpose": "Paragraph copy. Cap at 65-75ch line length. Never below 16px." },
+      "editorial": { "displayName": "Editorial (Serif Italic)", "purpose": "One emotional accent per page maximum. Reflective sentences, pull quotes." },
+      "label": { "displayName": "Label (Uppercase Tracked)", "purpose": "Form labels, badges, price-note kickers, section eyebrows." },
+      "mono": { "displayName": "Mono", "purpose": "Code-adjacent UI only. 404 page, code blocks, demo annotations." }
+    },
+    "shadows": [
+      {
+        "name": "ember-emphasis-glow",
+        "value": "0 10px 30px -10px rgba(255, 94, 71, 0.18)",
+        "purpose": "The system's only shadow. Reserved for the featured pricing card. Signals the recommended package."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-out-quart",
+        "value": "cubic-bezier(0.22, 1, 0.36, 1)",
+        "purpose": "Default easing for content reveals and the build-hero stagger. Exponential ease-out, no bounce."
+      },
+      {
+        "name": "ease-standard",
+        "value": "cubic-bezier(0.65, 0, 0.35, 1)",
+        "purpose": "Theme-toggle view transition. Symmetric in/out for the circular reveal."
+      },
+      {
+        "name": "duration-fast",
+        "value": "200ms",
+        "purpose": "Hover state shifts (color, border, transform). Always paired with reduced-motion skip."
+      },
+      {
+        "name": "duration-medium",
+        "value": "550ms",
+        "purpose": "Theme-toggle view transition reveal."
+      }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "640px" },
+      { "name": "md", "value": "768px" },
+      { "name": "lg", "value": "1024px" },
+      { "name": "xl", "value": "1280px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Pill-shaped, navy fill, ice text. Used for the single primary CTA on any view (form submit, hero CTA, featured-card action).",
+      "html": "<button class=\"ds-btn-primary\">Get a quote</button>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 40px; padding: 0 20px; background: #0E1A2B; color: #EEF2F6; font-family: 'Space Grotesk', system-ui, sans-serif; font-size: 14px; font-weight: 500; border: none; border-radius: 9999px; cursor: pointer; transition: opacity 200ms ease, transform 200ms ease; } .ds-btn-primary:hover { opacity: 0.9; } .ds-btn-primary:active { transform: scale(0.98); } .ds-btn-primary:focus-visible { outline: none; box-shadow: 0 0 0 2px #EEF2F6, 0 0 0 4px #FF5E47; }"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Pill-shaped, transparent fill with 1px hairline border. Sits next to the Primary Button as the alternative CTA (Cal.com, View work, Read more).",
+      "html": "<button class=\"ds-btn-secondary\">Book a call</button>",
+      "css": ".ds-btn-secondary { display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 40px; padding: 0 20px; background: transparent; color: #0E1A2B; font-family: 'Space Grotesk', system-ui, sans-serif; font-size: 14px; font-weight: 500; border: 1px solid rgba(14, 26, 43, 0.1); border-radius: 9999px; cursor: pointer; transition: background 200ms ease, transform 200ms ease; } .ds-btn-secondary:hover { background: #ffffff; } .ds-btn-secondary:active { transform: scale(0.98); } .ds-btn-secondary:focus-visible { outline: none; box-shadow: 0 0 0 2px #EEF2F6, 0 0 0 4px #FF5E47; }"
+    },
+    {
+      "name": "Ghost Button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Pill-shaped, no border, transparent fill. Used in dense UI where a Secondary would feel too heavy (nav row, table actions, filter strips).",
+      "html": "<button class=\"ds-btn-ghost\">Cancel</button>",
+      "css": ".ds-btn-ghost { display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 40px; padding: 0 20px; background: transparent; color: #0E1A2B; font-family: 'Space Grotesk', system-ui, sans-serif; font-size: 14px; font-weight: 500; border: none; border-radius: 9999px; cursor: pointer; transition: background 200ms ease; } .ds-btn-ghost:hover { background: #ffffff; } .ds-btn-ghost:focus-visible { outline: none; box-shadow: 0 0 0 2px #EEF2F6, 0 0 0 4px #FF5E47; }"
+    },
+    {
+      "name": "Default Badge",
+      "kind": "chip",
+      "refersTo": "badge-default",
+      "description": "Pill-shaped metadata label. Uppercase tracked 12px Space Grotesk. Category tags, status flags.",
+      "html": "<span class=\"ds-badge-default\">Web Design</span>",
+      "css": ".ds-badge-default { display: inline-flex; align-items: center; padding: 2px 10px; background: #ffffff; color: #5C6B7E; font-family: 'Space Grotesk', system-ui, sans-serif; font-size: 12px; font-weight: 500; line-height: 1.4; letter-spacing: 0.06em; text-transform: uppercase; border: 1px solid rgba(14, 26, 43, 0.1); border-radius: 9999px; }"
+    },
+    {
+      "name": "Accent Badge",
+      "kind": "chip",
+      "refersTo": "badge-accent",
+      "description": "The coral variant. Subject to The One Ember Rule, use only to mark 'featured' / 'recommended' / 'new'.",
+      "html": "<span class=\"ds-badge-accent\">Most Popular</span>",
+      "css": ".ds-badge-accent { display: inline-flex; align-items: center; padding: 2px 10px; background: rgba(255, 94, 71, 0.1); color: #FF5E47; font-family: 'Space Grotesk', system-ui, sans-serif; font-size: 12px; font-weight: 500; line-height: 1.4; letter-spacing: 0.06em; text-transform: uppercase; border: 1px solid rgba(255, 94, 71, 0.3); border-radius: 9999px; }"
+    },
+    {
+      "name": "Input Field",
+      "kind": "input",
+      "refersTo": "input-default",
+      "description": "Standard text input with above-field label. 40px height matches Medium button. Focus shifts border to Ember Coral with a 1px ring.",
+      "html": "<div class=\"ds-field\"><label class=\"ds-label\" for=\"ds-input-1\">Your name <span class=\"ds-required\">*</span></label><input class=\"ds-input\" id=\"ds-input-1\" type=\"text\" placeholder=\"Alex Rivera\" /></div>",
+      "css": ".ds-field { display: flex; flex-direction: column; gap: 6px; max-width: 320px; } .ds-label { font-family: 'Space Grotesk', system-ui, sans-serif; font-size: 12px; font-weight: 500; line-height: 1.4; letter-spacing: 0.06em; text-transform: uppercase; color: #5C6B7E; } .ds-required { color: #FF5E47; margin-left: 4px; } .ds-input { width: 100%; height: 40px; padding: 8px 12px; background: #ffffff; color: #0E1A2B; font-family: 'Space Grotesk', system-ui, sans-serif; font-size: 14px; border: 1px solid rgba(14, 26, 43, 0.1); border-radius: 8px; transition: border-color 200ms ease, box-shadow 200ms ease; } .ds-input::placeholder { color: #5C6B7E; } .ds-input:focus { outline: none; border-color: #FF5E47; box-shadow: 0 0 0 1px #FF5E47; }"
+    },
+    {
+      "name": "Service Card",
+      "kind": "card",
+      "refersTo": "card-default",
+      "description": "Compact link card with coral icon top-left, arrow top-right, title and one-paragraph summary. The hover state (translate + border-color + arrow-color) is the system's defining tactile moment.",
+      "html": "<a class=\"ds-service-card\" href=\"#\"><div class=\"ds-service-row\"><svg class=\"ds-service-icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M12 3l1.9 5.8H20l-4.9 3.6L17 18.2 12 14.6l-5 3.6 1.9-5.8L4 8.8h6.1z\"/></svg><svg class=\"ds-service-arrow\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M5 12h14M13 5l7 7-7 7\"/></svg></div><h3 class=\"ds-service-title\">Web Design</h3><p class=\"ds-service-summary\">Modern, mobile-first sites that look great and load fast. Built around what your customers actually need to do.</p></a>",
+      "css": ".ds-service-card { display: block; padding: 24px; background: #ffffff; color: #0E1A2B; text-decoration: none; border: 1px solid rgba(14, 26, 43, 0.1); border-radius: 12px; transition: border-color 200ms ease, transform 200ms ease; } .ds-service-card:hover { transform: translateY(-2px); border-color: rgba(255, 94, 71, 0.4); } .ds-service-row { display: flex; align-items: center; justify-content: space-between; } .ds-service-icon { width: 20px; height: 20px; color: #FF5E47; } .ds-service-arrow { width: 16px; height: 16px; color: #5C6B7E; transition: color 200ms ease; } .ds-service-card:hover .ds-service-arrow { color: #0E1A2B; } .ds-service-title { margin: 24px 0 0; font-family: 'Space Grotesk', system-ui, sans-serif; font-size: 16px; font-weight: 600; line-height: 1.3; } .ds-service-summary { margin: 8px 0 0; font-family: 'Space Grotesk', system-ui, sans-serif; font-size: 14px; font-weight: 400; line-height: 1.6; color: #5C6B7E; }"
+    },
+    {
+      "name": "Featured Pricing Card",
+      "kind": "card",
+      "refersTo": "card-featured",
+      "description": "The single most visually emphatic surface in the system. 2px Ember Coral border + Ember Emphasis Glow shadow + coral price-note kicker label. Hosts the recommended package in any pricing layout.",
+      "html": "<div class=\"ds-pricing-featured\"><div class=\"ds-pricing-kicker\">Most Popular</div><div class=\"ds-pricing-amount\">$2,400</div><p class=\"ds-pricing-desc\">A polished marketing site with everything a growing local business needs to look credible and book work.</p><ul class=\"ds-pricing-features\"><li><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#FF5E47\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M20 6L9 17l-5-5\"/></svg><span>Custom 5-page site</span></li><li><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#FF5E47\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M20 6L9 17l-5-5\"/></svg><span>Mobile-first, fast-loading</span></li><li><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#FF5E47\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M20 6L9 17l-5-5\"/></svg><span>Booking + contact forms</span></li></ul><button class=\"ds-pricing-cta\">Start here</button></div>",
+      "css": ".ds-pricing-featured { display: flex; flex-direction: column; padding: 32px; background: #ffffff; color: #0E1A2B; border: 2px solid #FF5E47; border-radius: 12px; box-shadow: 0 10px 30px -10px rgba(255, 94, 71, 0.18); max-width: 320px; font-family: 'Space Grotesk', system-ui, sans-serif; } .ds-pricing-kicker { margin-bottom: 8px; font-size: 12px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: #FF5E47; } .ds-pricing-amount { font-size: 32px; font-weight: 600; letter-spacing: -0.015em; line-height: 1; } .ds-pricing-desc { margin: 8px 0 0; font-size: 14px; font-weight: 400; line-height: 1.6; color: #5C6B7E; } .ds-pricing-features { list-style: none; padding: 0; margin: 24px 0 0; display: flex; flex-direction: column; gap: 12px; flex: 1; } .ds-pricing-features li { display: flex; align-items: flex-start; gap: 8px; font-size: 14px; line-height: 1.5; } .ds-pricing-features svg { width: 16px; height: 16px; margin-top: 2px; flex-shrink: 0; } .ds-pricing-cta { margin-top: 32px; width: 100%; height: 40px; padding: 0 20px; background: #0E1A2B; color: #EEF2F6; font-family: inherit; font-size: 14px; font-weight: 500; border: none; border-radius: 9999px; cursor: pointer; transition: opacity 200ms ease, transform 200ms ease; } .ds-pricing-cta:hover { opacity: 0.9; } .ds-pricing-cta:active { transform: scale(0.98); }"
+    },
+    {
+      "name": "Sticky Nav",
+      "kind": "nav",
+      "refersTo": "nav-default",
+      "description": "64px sticky top nav with blurred Ice Surface background, hairline bottom border, Lume lens-mark logo on the left, link row + theme toggle on the right.",
+      "html": "<header class=\"ds-nav\"><div class=\"ds-nav-inner\"><a class=\"ds-nav-logo\" href=\"#\"><svg viewBox=\"0 0 120 120\" fill=\"none\" aria-hidden=\"true\"><circle cx=\"60\" cy=\"60\" r=\"44\" fill=\"none\" stroke=\"#0E1A2B\" stroke-width=\"4\"/><circle cx=\"60\" cy=\"60\" r=\"28\" fill=\"#FF5E47\"/><circle cx=\"50\" cy=\"50\" r=\"6\" fill=\"#ffffff\" opacity=\"0.95\"/></svg><span>Lume<span class=\"ds-nav-dot\">·</span>Studio</span></a><nav class=\"ds-nav-links\"><a href=\"#\">Services</a><a href=\"#\">Work</a><a href=\"#\">Pricing</a><a href=\"#\">About</a><a href=\"#\">Contact</a></nav></div></header>",
+      "css": ".ds-nav { position: sticky; top: 0; z-index: 40; width: 100%; background: rgba(238, 242, 246, 0.8); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid rgba(14, 26, 43, 0.1); font-family: 'Space Grotesk', system-ui, sans-serif; } .ds-nav-inner { display: flex; align-items: center; justify-content: space-between; height: 64px; max-width: 1200px; margin: 0 auto; padding: 0 24px; } .ds-nav-logo { display: flex; align-items: center; gap: 10px; color: #0E1A2B; text-decoration: none; font-size: 18px; font-weight: 500; letter-spacing: -0.02em; line-height: 1; } .ds-nav-logo svg { width: 28px; height: 28px; flex-shrink: 0; transition: transform 300ms ease; } .ds-nav-logo:hover svg { transform: scale(1.1); } .ds-nav-dot { opacity: 0.3; margin: 0 2px; } .ds-nav-links { display: flex; align-items: center; gap: 28px; } .ds-nav-links a { color: #5C6B7E; text-decoration: none; font-size: 14px; font-weight: 400; transition: color 200ms ease; } .ds-nav-links a:hover { color: #0E1A2B; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Sunlit Workshop",
+    "overview": "Lume Studio's interface is a workshop with the windows open. Ice-blue surfaces stand in for natural daylight on a clean bench; midnight navy is the honest structural frame; ember coral is the one warm tool placed on the surface that draws the eye. The system is meant to feel like work happening in good light — visible, unhurried, accurately measured. The voice is warm, plainspoken, crafted. Generous whitespace that feels confident, not empty; rounded geometry that softens the navy/coral pairing; one accent used sparingly enough that its appearance feels intentional every time. The system rejects four families explicitly: Wix/Squarespace template visuals, crypto/AI startup gradient-and-glow, big-agency austere coldness, and generic SaaS landing pastiche. When in doubt, the system errs toward quieter — restraint signals skill.",
+    "keyCharacteristics": [
+      "Two-color palette: navy structure + coral signal, separated by ice/paper neutrals.",
+      "Pill buttons, soft-radius cards, full-radius badges — all geometry rounded.",
+      "Flat by default; the only shadow in the system is a soft ember glow under the featured pricing card.",
+      "Display sans (Space Grotesk) paired with editorial serif italic (Instrument Serif) for the rare emotional accent.",
+      "Mono (JetBrains Mono) appears only as a craft signal — code-adjacent UI, the 404 page, micro-labels.",
+      "Theme-aware: same palette, inverted polarity; navy becomes the daylight in dark mode."
+    ],
+    "rules": [
+      { "name": "The One Ember Rule", "body": "Ember Coral covers ≤10% of any rendered screen. Its rarity is the entire point — every appearance carries weight. If a screen needs two coral elements competing for attention, downgrade one to navy.", "section": "colors" },
+      { "name": "The No-Pure-White Rule", "body": "#ffffff appears as a value in code only on the Surface Paper token. Backgrounds, hero panels, and full-bleed sections use Ice Surface (#EEF2F6) so the page reads as cool daylight, not a printer's blank sheet.", "section": "colors" },
+      { "name": "The Tinted-Hairline Rule", "body": "Borders are navy-with-alpha (light mode) or ice-with-alpha (dark mode), never neutral grey. Even the dividers are part of the palette.", "section": "colors" },
+      { "name": "The One-Serif-Per-Page Rule", "body": "Instrument Serif italic carries emotional weight precisely because it is rare. Two italic serif lines in the same view dilute both.", "section": "typography" },
+      { "name": "The Uppercase-Only-For-Labels Rule", "body": "Uppercase + 0.06em tracking belongs to labels, badges, and price-note kickers. Headlines are never uppercased.", "section": "typography" },
+      { "name": "The Flat-By-Default Rule", "body": "New surfaces are flat. If a component reads as needing elevation, the answer is almost always (a) increase whitespace, (b) shift surface color, or (c) add a hairline border — in that order. A shadow is the last resort.", "section": "elevation" },
+      { "name": "The One-Shadow Rule", "body": "The ember-tinted glow under the featured pricing card is the system's only shadow. If you find yourself adding a second shadow anywhere, stop.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do use Midnight Navy (#0E1A2B) as the structural color for body text, primary buttons, and the logo. It is the system's beam.",
+      "Do reserve Ember Coral (#FF5E47) for ≤10% of any screen — focus rings, CTAs that aren't carried by navy, the featured pricing card's border + glow, the service card icon. Its rarity is its meaning.",
+      "Do use Ice Surface (#EEF2F6) for the page background. The cool tint is what separates Lume from a default-CSS site.",
+      "Do keep cards flat with a 1px Hairline border. The one exception — the featured pricing card — earns its emphasis because nothing else has it.",
+      "Do use pill-shaped buttons at every size. The softness is intentional warmth against the otherwise restrained palette.",
+      "Do size body text at 1rem (16px) or larger. Primary buyers skew 40+; small body type costs conversions, not just a11y points.",
+      "Do use Instrument Serif italic for one emotional accent per page, maximum.",
+      "Do keep nav, footer, forms, and content copy at WCAG 2.1 AA contrast. Best-effort applies to interactive demos only, never to text.",
+      "Do honor prefers-reduced-motion on every animation. Animations skip to final state, they do not just slow down."
+    ],
+    "donts": [
+      "Don't use #ffffff as a background color. Surface Paper is for cards and inputs only; backgrounds are Ice Surface. The system has a temperature; pure white breaks it.",
+      "Don't stack the Wix/Squarespace/GoDaddy template visual: stock-photo hero, three-icon services row, identical feature cards, 'Welcome to Our Company' headline.",
+      "Don't introduce crypto/AI startup energy: dark gradient hero, neon accents, glassmorphism, mesh backgrounds, 'launching soon' energy.",
+      "Don't lean big-agency austere: tiny type, all-caps headlines, gallery-wall portfolio, no prices visible. Buyers feel they can't afford to ask and bounce.",
+      "Don't copy the generic SaaS landing pastiche: gradient-number hero, feature-grid with soft shadows, 'trusted by' logo wall, dark-mode showcase as the headline pattern.",
+      "Don't add a second shadow anywhere in the system. The Ember Emphasis Glow under the featured pricing card is the only shadow that exists.",
+      "Don't use border-left or border-right greater than 1px as a colored stripe on cards, callouts, or alerts.",
+      "Don't apply background-clip: text with a gradient (gradient text). Single solid colors only. Emphasis through weight or size.",
+      "Don't nest cards inside cards. If content needs grouping inside a card, use spacing and a hairline divider, not a sub-card.",
+      "Don't uppercase headlines. Uppercase belongs to labels, badges, and price-note kickers — the 12px tracked tier.",
+      "Don't use em dashes in UI copy. Use commas, colons, semicolons, periods, or parentheses.",
+      "Don't introduce a new font family without removing one. Three text families (Space Grotesk, Instrument Serif, JetBrains Mono) is the cap.",
+      "Don't expand the palette. If a screen feels like it needs a new color, the answer is whitespace, hierarchy, or one of the existing tokens — not green, not yellow, not a second accent."
+    ]
+  }
+}
